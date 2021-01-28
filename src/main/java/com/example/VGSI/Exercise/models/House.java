@@ -1,6 +1,9 @@
 package com.example.VGSI.Exercise.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class House {
+    @JsonIgnore
     private String houseId;
     private String ownerfirstName;
     private String ownerlastName;
@@ -9,6 +12,9 @@ public class House {
     private String state;
     private String zip;
     private String propertyType;
+    private String location;
+
+    public House() {}
 
     public House(String houseId, String ownerfirstName, String ownerlastName, String street, String city, String state,
                  String zip, String propertyType) {
@@ -20,6 +26,7 @@ public class House {
         this.state = state;
         this.zip = zip;
         this.propertyType = propertyType;
+        this.location = String.format("http://localhost:8080/api/houses/%s", houseId);
     }
 
     public String getHouseId() {
@@ -84,5 +91,13 @@ public class House {
 
     public void setPropertyType(String propertyType) {
         this.propertyType = propertyType;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

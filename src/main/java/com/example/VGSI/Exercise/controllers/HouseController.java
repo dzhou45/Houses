@@ -2,7 +2,9 @@ package com.example.VGSI.Exercise.controllers;
 
 import com.example.VGSI.Exercise.models.House;
 import com.example.VGSI.Exercise.services.HouseService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class HouseController {
     }
 
     @PutMapping("/api/houses/{hid}")
-    public Integer updateHouseByID(
+    public House updateHouseByID(
             @PathVariable("hid") String houseId,
             @RequestBody House newHouse) {
         return service.updateHouseById(houseId, newHouse);

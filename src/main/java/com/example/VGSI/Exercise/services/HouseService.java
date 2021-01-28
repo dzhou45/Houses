@@ -39,7 +39,11 @@ public class HouseService {
             ioe.printStackTrace();
         }
 
-        houses.remove(0);
+
+        // Remove the first line in the data that contains all the names of all the fields, we just want the house data
+        if (!houses.isEmpty()) {
+            houses.remove(0);
+        }
         return houses;
     }
 
@@ -56,14 +60,21 @@ public class HouseService {
         return null;
     }
 
-    public Integer updateHouseById(String houseId, House newHouse) {
-        int index = -1;
+    public House updateHouseById(String houseId, House newHouse) {
+        House house = new House();
         for(int i = 0; i < this.houses.size(); i++) {
             if(this.houses.get(i).getHouseId().equals(houseId)) {
+                // We want to preserve the id and uri because the id is in the put request path variable, not the
+                // request body
+                String location = this.houses.get(i).getLocation();
+
+                // replace with new house object, but preserve the id and uri
                 this.houses.set(i, newHouse);
-                index = i;
+                this.houses.get(i).setHouseId(houseId);
+                this.houses.get(i).setLocation(location);
+                house = this.houses.get(i);
             }
         }
-        return index;
+        return house;
     }
 }
