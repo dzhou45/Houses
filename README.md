@@ -22,7 +22,7 @@ If persistent storage were required, you would want to connect this server to a 
 # API Design Choices
 
 When a client uses a get request for a specific house id, and that house id does not exist, for example api/houses/11, I have chosen to send back an empty response. 
-This is because there is nothing wrong with the get request, there is just no data for that specific house. Outputting an error may potentially be confusing to the user when their request is in a correct format.
+This is because there is nothing wrong with the get request, there is just no data for that specific house. Outputting a 404 error may potentially be confusing to the user.
 
 # Security
 
