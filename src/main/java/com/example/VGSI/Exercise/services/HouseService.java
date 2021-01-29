@@ -18,6 +18,7 @@ public class HouseService {
         this.houses = readHousesFromCSV("src/main/resources/houses.csv");
     }
 
+    // initially reads the list of houses from the given data file, would use a database in actual application
     private List<House> readHousesFromCSV(String fileName) {
         List<House> houses = new ArrayList<>();
         Path pathToData = Paths.get(fileName);
@@ -38,7 +39,6 @@ public class HouseService {
                 IOException ioe) {
             ioe.printStackTrace();
         }
-
 
         // Remove the first line in the data that contains all the names of all the fields, we just want the house data
         if (!houses.isEmpty()) {
@@ -64,6 +64,7 @@ public class HouseService {
         House house = new House();
         for(int i = 0; i < this.houses.size(); i++) {
             if(this.houses.get(i).getHouseId().equals(houseId)) {
+
                 // We want to preserve the id and uri because the id is in the put request path variable, not the
                 // request body
                 String location = this.houses.get(i).getLocation();
