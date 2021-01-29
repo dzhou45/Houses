@@ -11,6 +11,8 @@ Your project will be built automatically
 To run the solution, right click VgsiExerciseApplication and click run.
 VgsiExerciseApplication is located under /src/main/java/com.example.VGSI.Exercise
 
+This will start the server, which is hosted on http://localhost:8080
+
 To run tests, run HouseControllerTest under /src/test/java/com.example.VGSI.Exercise.controllers
 
 # Improvements
