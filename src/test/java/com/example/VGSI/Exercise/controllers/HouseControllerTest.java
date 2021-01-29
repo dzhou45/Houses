@@ -155,7 +155,7 @@ public class HouseControllerTest {
                 "    \"state\": \" MA\",\n" +
                 "    \"zip\": \" 01749\",\n" +
                 "    \"propertyType\": \" Multi Family\",\n" +
-                "    \"location\": \"http://localhost:8080/api/houses/2\"\n" +
+                "    \"location\": \"http://localhost:8080/api/houses/15135\"\n" +
                 "}";
 
         Mockito.when(houseService.findAllHouses()).thenReturn(this.houses);
