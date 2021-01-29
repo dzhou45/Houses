@@ -1,6 +1,6 @@
 # Building and Running
 
-To build the solution, first clone this repository by navigating to the directory in which you want this project to be located.
+To build the solution, first clone this repository by navigating to the directory where you want the project
 
 Enter command:
 
