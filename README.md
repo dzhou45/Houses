@@ -15,4 +15,5 @@ To run tests, run HouseControllerTest under /src/test/java/com.example.VGSI.Exer
 
 # API Design Choices
 
-When a client uses a get request for a specific house id, and that house id does not exist, for example api/houses/11, I have chosen to send back an empty response. This is beca
+When a client uses a get request for a specific house id, and that house id does not exist, for example api/houses/11, I have chosen to send back an empty response. 
+This is beca
