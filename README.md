@@ -6,7 +6,7 @@ Enter command:
 
 git clone https://github.com/dzhou45/Houses.git
 
-Your project will be built automatically.
+Your project will be built automatically
 
 To run the solution, right click VgsiExerciseApplication and click run.
 VgsiExerciseApplication is located under /src/main/java/com.example.VGSI.Exercise
