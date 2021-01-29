@@ -1,6 +1,6 @@
 # Building and Running
 
-To build the solution, first clone this repository by navigating to the directory of your choosing.
+To build the solution, first clone this repository by navigating to the directory in which you want this project to be located.
 
 Enter command:
 
@@ -13,4 +13,6 @@ VgsiExerciseApplication is located under /src/main/java/com.example.VGSI.Exercis
 
 To run tests, run HouseControllerTest under /src/test/java/com.example.VGSI.Exercise.controllers
 
+# API Design Choices
 
+When a client uses a get request for a specific house id, and that house id does not exist, for example api/houses/11, I have chosen to send back an empty response. This is beca
