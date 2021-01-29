@@ -13,6 +13,11 @@ VgsiExerciseApplication is located under /src/main/java/com.example.VGSI.Exercis
 
 This will start the server, which is hosted on http://localhost:8080
 
+API EndPoints:
+GET  http://localhost:8080/api/houses           get all houses
+GET  http://localhost:8080/api/houses/{houseId} get specific house
+PUT  http://localhost:8080/api/houses/{houseId} update specific house
+
 To run tests, run HouseControllerTest under /src/test/java/com.example.VGSI.Exercise.controllers
 
 # Improvements
