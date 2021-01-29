@@ -1,4 +1,4 @@
-#Building and Running
+# Building and Running
 
 To build the solution, first clone this repository by navigating to the directory of your choosing.
 
